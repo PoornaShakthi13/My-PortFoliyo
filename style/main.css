@@ -1,0 +1,31 @@
+#navId{
+    position: relative;
+    background-color: aqua;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+#sec{
+    position: relative;
+    background-color: maroon;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list{
+    display: inline;
+
+}
+#nav-list>li{
+    display: inline;
+}
+#H{
+    color: #8196ff;
+}
+
+.N{
+    color: red;
+}
+
