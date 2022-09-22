@@ -9,11 +9,66 @@
 #sec{
     position: relative;
     background-color: maroon;
-    height: 100px;
+    height: 350px;
     margin: 0;
     padding: 0;
+
+
+}
+#sec>div:nth-child(2)>ul>li{
+    display: inline-block;
+    list-style: none;
+    font-size: 50px;
+    margin-left: 30px;
 }
 
+#sec>div:nth-last-child(1){
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 50%;
+    height: 400px;
+    left: 50%;
+    top: 0;
+}
+
+#sec>div:nth-last-child(1)>#im {
+    position: relative;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    top: 25px;
+}
+
+#sec>div:nth-child(1)>h1{
+    position: absolute;
+    left: 40%;
+    right: 0;
+}
+
+#skill>div{
+
+    width: 900px;
+    height: 100px;
+
+}
+
+#languages{
+    display: flex;
+}
+#languages>div{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+}
+
+#tools{
+    display: flex;
+}
+
+#tec{
+    display: flex;
+}
 #nav-list{
     display: inline;
 
