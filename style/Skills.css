@@ -1,0 +1,145 @@
+.MySkills{
+    width: 99vw;
+    height: 130vh;
+    top: 304vh;
+    background-color: #11141b;
+    position: absolute;
+}
+.MySkills>h1{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    left: 0;
+    right: 0;
+    top: 20px;
+    margin: auto;
+    font-size: 50px;
+}
+/Languages/
+.MySkills>div:nth-child(2){
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 130px;
+    margin: auto;
+    color: #3e64bd;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    font-family: 'Michroma', sans-serif;
+}
+.MySkills>section:nth-child(3){
+
+    width: 1400px;
+    height: 150px;
+    top: 170px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+.MySkills>section:nth-child(3)>div{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.89);
+    background-color: #212529;
+    background-position: center;
+    background-size: cover;
+}
+/tools/
+.MySkills>div:nth-child(4){
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 350px;
+    margin: auto;
+    color: #3e64bd;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    font-family: 'Michroma', sans-serif;
+}
+.MySkills>section:nth-child(5){
+
+    width: 1400px;
+    height: 150px;
+    top: 400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+.MySkills>section:nth-child(5)>div{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.89);
+    background-color: #212529;
+}
+
+/Technologies/
+.MySkills>div:nth-child(6){
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 600px;
+    margin: auto;
+    color: #3e64bd;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    font-family: 'Michroma', sans-serif;
+
+}
+.MySkills>section:nth-child(7){
+
+    width: 400px;
+    height: 150px;
+    top: 650px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+.MySkills>section:nth-child(7)>div{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.89);
+    background-color: #212529;
+}
+
+.MySkills>section:nth-child(3)>div>img,.MySkills>section:nth-child(5)>div>img,.MySkills>section:nth-child(7)>div>img{
+    width: 50%;
+    height: 60%;
+    margin-left: 50px;
+    margin-top: 7px;
+
+}
+
+.MySkills>section:nth-child(3)>div>p,.MySkills>section:nth-child(5)>div>p,.MySkills>section:nth-child(7)>div>p{
+    font-size: 25px;
+    bottom: 5px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+.MySkills>section:nth-child(7)>div{
+
+}
+.MySkills>section:nth-child(7)>i{
+
+}
