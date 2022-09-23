@@ -32,7 +32,7 @@
     height: 300px;
     background-size: cover;
     position: relative;
-    border: 1px solid greenyellow;
+    border: 5px solid greenyellow;
     left: 200px;
     top: 75px;
 
@@ -43,6 +43,22 @@
     position: relative;
     left: 600px;
     bottom: 150px;
+}
 
+#image{
+    width: 100%;
+    height: 100%;
+}
+.aboutMe>div:nth-child(3)>p:nth-child(1){
 
+    bottom: 300px;
+    position: relative;
+    font-size: 50px;
+
+}
+
+.aboutMe>div:nth-child(3)>p:nth-child(2){
+
+    font-size: 30px;
+    bottom: 300px;
 }
