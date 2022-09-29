@@ -71,3 +71,15 @@
     bottom: 300px;
 
 }
+.aboutMe>div:nth-child(4){
+
+    position: relative;
+    bottom: 214px;
+    font-size: 25px;
+    color: white;
+    left: 834px;
+    border: 2px solid red;
+    width: 250px;
+    background-color: blue;
+
+}
