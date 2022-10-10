@@ -104,3 +104,13 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.projects>div:nth-child(2)>div:nth-child(2)>a>div{
+
+    margin-top: 55px;
+}
+
+.projects>div:nth-child(2)>div:nth-child(3)>a>div{
+
+    margin-top: 55px;
+}
