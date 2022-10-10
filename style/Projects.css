@@ -43,10 +43,64 @@
     border: 2px solid darkred;
     position: relative;
     left: 250px;
+    transition: 1s;
+
+
+}
+.projects>div:nth-child(2)>div:hover{
+    transform: scale(1.2);
 
 }
 
-.projects{
+.projects>div:nth-child(2){
+    font-size: 25px;
+}
 
-    font-size: 30px;
+.app{
+    margin-left: 60px;
+}
+.dev-span{
+    margin-left: -10px;
+}
+
+.web{
+    margin-left: 25px;
+}
+.other{
+    margin-left: 50px;
+}
+
+.projects>div:nth-child(2)>div>a{
+    text-decoration: none;
+    font-size: 20px;
+    /*border: 2px solid white;*/
+    /*transition: 1s;*/
+    /*padding: 5px;*/
+    color: white;
+
+}
+
+
+.projects>div:nth-child(2)>div>a>div{
+    margin-left: 45px;
+    width: 60%;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px ;
+
+
+}
+.projects>div:nth-child(2)>div>a>div:hover{
+    background-color: #ff253a;
+
+
+}
+.projects>div:nth-child(2)>div>a>div>h2{
+    margin-left: 10px;
+    padding: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
