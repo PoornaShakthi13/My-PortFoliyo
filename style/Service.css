@@ -35,7 +35,7 @@
     bottom: -122px;
     position: relative;
 }
-.my-Service>div:nth-child(2)>div{
+.my-Service>div:nth-child(2)>div {
     width: 100%;
     height: 100%;
     color: white;
@@ -48,10 +48,32 @@
     justify-content: center;
     align-items: center;
     background-position: center;
-    padding-left: 45px;
-
+    /*padding-left: 45px;*/
+    background-size: cover;
 
 }
+.images>div>img{
+    width: 100%;
+    height: 100%;
+    /*margin-left: -45px;*/
+}
+
+.images>div>h1{
+    margin-left: 20px;
+}
+
+.images>div:nth-child(1)>h1{
+    margin-left: 70px;
+}
+.images>div:nth-child(1)>h1>span{
+    margin-left: -10px;
+}
+
+.images>div:nth-child(2)>h1{
+    margin-left:  40px;
+}
+
+
 
 .my-Service>div:nth-child(2)>div:hover{
     transform: scale(0.9);
