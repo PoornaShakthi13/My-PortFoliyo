@@ -29,7 +29,7 @@
             display: flex;
 
             animation-name: my-animation;
-            animation-duration: 20s;
+            animation-duration: 10s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
@@ -56,6 +56,21 @@
             background-image: url("assest/4.jpg");
             background-position: center;
             background-size: cover;
+        }
+        @keyframes my-animation {
+            0%,20%{
+                transform: translateX(0%);
+            }
+            30%,50%{
+                transform: translateX(-25%);
+            }
+            60%,80%{
+                transform: translateX(-50%);
+            }
+            90%,100%{
+                transform: translateX(-75%);
+            }
+
         }
 
 
