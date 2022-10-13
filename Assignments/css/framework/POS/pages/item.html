@@ -82,10 +82,47 @@
     </div>
 </div>
 <!--------------slider------------->
-<script src="../assest/js/bootstrap.min.js"></script>
 
-</body>
+<main>
+    <div class="card text-bg-dark mb-3 col-4" style="margin-top: 25px">
+        <div class="card-body">
+            <div class="row g-2">
+                <h5 class="card-title text-warning">Customer Details</h5>
+                <hr class="table-group-divider">
+                <div class="d-flex shadow-none" role="">
+                    <input class="form-control me-2" id="txtSearch" type="" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light bg-success" id="btnSearch" type="button">Search</button>
+                </div>
+                <div class="col-md-12 shadow-none">
+                    <label for="inputState" class="form-label">Customer ID</label>
+                    <input  id="inputState" class="form-control"></input>
+                </div>
 
-    <script src="../assest/js/bootstrap.min.js"></script>
+                <div class="col-md-12 shadow-none">
+                    <label for="txtCustomerName" class="form-label">Customer Name</label>
+                    <input type="text" class="form-control" id="txtCustomerName">
+                </div>
+
+                <div class="col-md-12 shadow-none">
+                    <label for="txtAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="txtAddress" placeholder="">
+                </div>
+
+                <div class="col-md-12 shadow-none">
+                    <label for="txtContactNumber" class="form-label">Contact Number</label>
+                    <input type="number" class="form-control" id="txtContactNumber" placeholder="">
+                </div>
+
+                <div class="col-md-12 gap-5" style="padding:0 " >
+                    <button id="btnSaveCustomer" class="btn btn-primary bg-primary col-3 " data-bs-target="#exampleModal" data-bs-toggle="modal" type="button" style="margin-right: 40px ">
+                        <i class="bi bi-arrow-clockwise"></i> Add Customer
+                    </button>
+                </div>
+            </div>
+        </div>
+   </div>
+</main>
+
+ <script src="../assest/js/bootstrap.min.js"></script>
 </body>
 </html>
