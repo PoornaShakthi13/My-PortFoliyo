@@ -153,8 +153,8 @@
                         </div>
 
                         <div class="col-md-6"  style="padding-right: 0;">
-                            <label for="qtyOnH" class="form-label">Qty On Hand :</label>
-                            <input type="text" class="form-control" id="qtyOnH" placeholder="XXX">
+                            <label for="qty" class="form-label">Qty  :</label>
+                            <input type="text" class="form-control" id="qty" placeholder="XXX">
                         </div>
 
                         <div class="d-flex ms-5 gap-xl-5">
@@ -173,6 +173,31 @@
             </div>
         </div>
     </div>
+
+
+    <div class="col-12 ms-0 shadow-none" style="margin-right: 20px; margin-top: 10px;">
+        <div style="height:180px; overflow-y: scroll">
+            <table class="table table-bordered bg-dark table-responsive">
+                <thead class="bg-dark text-white text-center">
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>QTY</th>
+                    <th>Price (Rs)</th>
+                </tr>
+                </thead>
+                <tbody class="bg-primary" id="tblOrder">
+                     <tr class="bg-primary text-dark">
+                             <td>I001</td>
+                             <td>Cement</td>
+                             <td>100</td>
+                             <td>3200.00</td>
+                     </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </main>
 
  <script src="../assest/js/bootstrap.min.js"></script>
