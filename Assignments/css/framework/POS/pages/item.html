@@ -84,43 +84,53 @@
 <!--------------slider------------->
 
 <main>
-    <div class="card text-bg-dark mb-3 col-4" style="margin-top: 25px">
-        <div class="card-body">
-            <div class="row g-2">
-                <h5 class="card-title text-warning">Customer Details</h5>
-                <hr class="table-group-divider">
-                <div class="d-flex shadow-none" role="">
-                    <input class="form-control me-2" id="txtSearch" type="" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light bg-success" id="btnSearch" type="button">Search</button>
-                </div>
-                <div class="col-md-12 shadow-none">
-                    <label for="inputState" class="form-label">Customer ID</label>
-                    <input  id="inputState" class="form-control"></input>
-                </div>
+    <div class="d-flex gap-4">
+        <div class="" style="max-height: 350px; width: 450px">
 
-                <div class="col-md-12 shadow-none">
-                    <label for="txtCustomerName" class="form-label">Customer Name</label>
-                    <input type="text" class="form-control" id="txtCustomerName">
-                </div>
+            <div class="card text-bg-secondary shadow-lg" style="padding: 0; margin: 0;">
+                <div class="card-body shadow-none" style="padding: 0; margin: 0;">
+                    <h5 class="card-title fw-bold text-center">Add New Item</h5>
+                    <hr class="table-group-divider bg-black">
+                    <div class="row g-2">
 
-                <div class="col-md-12 shadow-none">
-                    <label for="txtAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="txtAddress" placeholder="">
-                </div>
+                        <div class="col-md-5 shadow-none px-3">
+                            <label for="txtItemId" class="form-label">Item ID :</label>
+                            <input id="txtItemId" name="id" class="form-select"></input>
+                        </div>
 
-                <div class="col-md-12 shadow-none">
-                    <label for="txtContactNumber" class="form-label">Contact Number</label>
-                    <input type="number" class="form-control" id="txtContactNumber" placeholder="">
-                </div>
+                        <div class="col-md-6 shadow-none"  style="padding-right: 0;">
+                            <label for="itemInputName" class="form-label">Item Name :</label>
+                            <input type="text" class="form-control" id="itemInputName" placeholder="Cement">
+                        </div>
 
-                <div class="col-md-12 gap-5" style="padding:0 " >
-                    <button id="btnSaveCustomer" class="btn btn-primary bg-primary col-3 " data-bs-target="#exampleModal" data-bs-toggle="modal" type="button" style="margin-right: 40px ">
-                        <i class="bi bi-arrow-clockwise"></i> Add Customer
-                    </button>
+                        <div class="col-md-5 px-3">
+                            <label for="itemQTY" class="form-label">Item QTY :</label>
+                            <input type="text" class="form-control" id="itemQTY" placeholder="xxx">
+                        </div>
+
+                        <div class="col-md-6"  style="padding-right: 0;">
+                            <label for="itemprice" class="form-label">Price :</label>
+                            <input type="text" class="form-control" id="itemprice" placeholder="Rs 0.00">
+                        </div>
+
+                        <div class="d-flex ms-5 gap-xl-5">
+
+
+                            <button class="btn btn-danger" id="btnClearItem" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">
+                                Cansel
+                            </button>
+
+                            <button class="btn btn-success ms-3" data-bs-target="#saveItemLabel" data-bs-toggle="modal" id="btnAddNewItem" type="button">
+                                <i class="bi bi-person-plus-fill"></i> Add New Item
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-   </div>
+
+
+    </div>
 </main>
 
  <script src="../assest/js/bootstrap.min.js"></script>
