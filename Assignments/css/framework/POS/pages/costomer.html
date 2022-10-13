@@ -82,6 +82,93 @@
     </div>
 </div>
 <!--------------slider------------->
+
+<main>
+
+    <div class="d-flex col-12">
+        <div class="card text-bg-dark mb-3 col-5" style="margin-top: 25px">
+            <div class="card-body">
+                <div class="row g-2">
+                    <h5 class="card-title text-warning">Customer Details</h5>
+                    <hr class="table-group-divider">
+                    <div class="d-flex shadow-none" role="">
+                        <input class="form-control me-2" id="txtSearch" type="" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light bg-success" id="btnSearch" type="button">Search</button>
+                    </div>
+                    <div class="col-md-12 shadow-none">
+                        <label for="inputState" class="form-label">Customer ID</label>
+                        <input  id="inputState" class="form-control"></input>
+                    </div>
+
+                    <div class="col-md-12 shadow-none">
+                        <label for="txtCustomerName" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="txtCustomerName">
+                    </div>
+
+                    <div class="col-md-12 shadow-none">
+                        <label for="txtAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="txtAddress" placeholder="">
+                    </div>
+
+                    <div class="col-md-12 shadow-none">
+                        <label for="txtContactNumber" class="form-label">Contact Number</label>
+                        <input type="number" class="form-control" id="txtContactNumber" placeholder="">
+                    </div>
+
+                    <div class="col-md-12 gap-5" style="padding:0 " >
+                        <button id="btnSaveCustomer" class="btn btn-primary bg-primary col-3 " data-bs-target="#exampleModal" data-bs-toggle="modal" type="button" style="margin-right: 40px ">
+                            <i class="bi bi-arrow-clockwise"></i> Add Customer
+                        </button>
+                        <button id="btnUpdateCustomer" class="btn btn-primary bg-primary col-3 ms-auto" data-bs-target="#exampleModal2" data-bs-toggle="modal" type="button" style="margin-right: 40px">
+                            <i class="bi bi-trash3-fill"></i> Update Customer
+                        </button>
+                        <button id="btnDeleteCustomer" class="btn btn-primary bg-primary col-3 ms-auto" data-bs-target="#exampleModal2" data-bs-toggle="modal" type="button">
+                            <i class="bi bi-trash3-fill"></i> Delete Customer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-7 ms-2" style=" overflow-y: scroll; margin-top: 30px;" >
+            <table class="table table-bordered">
+                <thead class="bg-black text-white">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Customer Address</th>
+                    <th>Customer Contact</th>
+                </tr>
+                </thead>
+                <tbody id="tblCustomer">
+
+                <tr class="bg-primary text-dark">
+                    <td>C001</td>
+                    <td>Poorna</td>
+                    <td>Polonnaruwa</td>
+                    <td>0771469122</td>
+                </tr>
+
+                <tr class="bg-primary text-dark">
+                    <td>C002</td>
+                    <td>Shakthi</td>
+                    <td>Colombo</td>
+                    <td>0716581365</td>
+                </tr>
+
+                <tr class="bg-primary text-dark">
+                    <td>C003</td>
+                    <td>Shanuka</td>
+                    <td>Panadura</td>
+                    <td>0775308537</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+
+</main>
 <script src="../assest/js/bootstrap.min.js"></script>
 
 </body>
