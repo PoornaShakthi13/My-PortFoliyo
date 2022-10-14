@@ -12,3 +12,11 @@ function loadAllCustomerID() {
         }
     // })
 }
+
+$("#btnAdd").click(function () {
+    $("#dashBoard").css('display','none');
+    $("#customer").css('display','block');
+    $("#item").css('display','none');
+    $("#orders").css('display','none');
+    $("#orderDetail").css('display','none');
+})
