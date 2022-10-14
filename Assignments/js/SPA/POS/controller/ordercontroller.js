@@ -154,6 +154,9 @@ $("#txtOrderCash").on("keydown",function (event) {
     var orderDetails=[];
 
 $("#btnPlaceorder").click(function () {
+        var oid=generateOrderId();
+        var date=getCurrentDate();
+
         var orderDetail= {
             orderId:oid,
             customerName:$("#txtOrderCustomerName").val(),
@@ -162,4 +165,25 @@ $("#btnPlaceorder").click(function () {
             date:date
 
         }
+        orderDetails.push(orderDetail);
+
+})
+
+
+function generateOrderId() {
+        var orderId="OR001"
+        var orderNewID="OR00";
+        if (orderDetails.length==0){
+                return orderId;
+        }else {
+           var id= orderId.substr(4,)
+            var newId= id+1;
+           orderNewID=orderId+newId;
+
+           return orderNewID;
+        }
+}
+
+$("#btnorderdetail").click(function () {
+
 })
