@@ -258,18 +258,18 @@
                                 </div>
 
                                 <div class="col-md-6 shadow-none"  style="padding-right: 0;">
-                                    <label for="itemInputName" class="form-label">Item Name :</label>
-                                    <input type="text" class="form-control" id="itemInputName" placeholder="Cement">
+                                    <label for="txtItemName" class="form-label">Item Name :</label>
+                                    <input type="text" class="form-control" id="txtItemName" placeholder="Cement">
                                 </div>
 
                                 <div class="col-md-5 px-3">
-                                    <label for="itemQTY" class="form-label">Item QTY :</label>
-                                    <input type="text" class="form-control" id="itemQTY" placeholder="xxx">
+                                    <label for="txtItemQty" class="form-label">Item QTY :</label>
+                                    <input type="text" class="form-control" id="txtItemQty" placeholder="xxx">
                                 </div>
 
                                 <div class="col-md-6"  style="padding-right: 0;">
-                                    <label for="itemprice" class="form-label">Price :</label>
-                                    <input type="text" class="form-control" id="itemprice" placeholder="Rs 0.00">
+                                    <label for="txtItemPrice" class="form-label">Price :</label>
+                                    <input type="text" class="form-control" id="txtItemPrice" placeholder="Rs 0.00">
                                 </div>
 
                                 <div class="d-flex ms-5 gap-xl-5">
@@ -279,7 +279,7 @@
                                         Cancel
                                     </button>
 
-                                    <button class="btn btn-success ms-3" data-bs-target="#saveItemLabel" data-bs-toggle="modal" id="btnAddNewItem" type="button" style="margin-bottom: 38px;margin-top: 40px;margin-left: 35px">
+                                    <button class="btn btn-success ms-3" data-bs-target="#saveItemLabel" data-bs-toggle="modal" id="btnSaveItem" type="button" style="margin-bottom: 38px;margin-top: 40px;margin-left: 35px">
                                         <i class="bi bi-person-plus-fill"></i> Add New Item
                                     </button>
                                 </div>
@@ -297,23 +297,23 @@
                             <div class="row g-2">
 
                                 <div class="col-md-5 shadow-none px-3">
-                                    <label for="itemCodeOrder" class="form-label">Item ID :</label>
-                                    <select id="itemCodeOrder" class="form-select"></select>
+                                    <label for="txtUpdateItemId" class="form-label">Item ID :</label>
+                                    <input id="txtUpdateItemId" class="form-select"></input>
                                 </div>
 
                                 <div class="col-md-6 shadow-none"  style="padding-right: 0;">
-                                    <label for="descriptionOrder" class="form-label">Item Name :</label>
-                                    <input type="text" class="form-control" id="descriptionOrder" placeholder="----------------">
+                                    <label for="txtUpdateItemName" class="form-label">Item Name :</label>
+                                    <input type="text" class="form-control" id="txtUpdateItemName" placeholder="----------------">
                                 </div>
 
                                 <div class="col-md-5 px-3">
-                                    <label for="unitPrice" class="form-label">Price :</label>
-                                    <input type="text" class="form-control" id="unitPrice" placeholder="Rs. 0.00">
+                                    <label for="txtUpdateItemPrice" class="form-label">Price :</label>
+                                    <input type="text" class="form-control" id="txtUpdateItemPrice" placeholder="Rs. 0.00">
                                 </div>
 
                                 <div class="col-md-6"  style="padding-right: 0;">
-                                    <label for="qty" class="form-label">Qty  :</label>
-                                    <input type="text" class="form-control" id="qty" placeholder="XXX">
+                                    <label for="txtUpdateItemQty" class="form-label">Qty  :</label>
+                                    <input type="text" class="form-control" id="txtUpdateItemQty" placeholder="XXX">
                                 </div>
 
                                 <div class="d-flex ms-5 gap-xl-5">
@@ -345,7 +345,7 @@
                             <th>Price (Rs)</th>
                         </tr>
                         </thead>
-                        <tbody class="bg-primary" id="tblOrder">
+                        <tbody class="bg-primary" id="tblItem">
                         <tr class="bg-primary text-dark">
                             <td>I001</td>
                             <td>Cement</td>
