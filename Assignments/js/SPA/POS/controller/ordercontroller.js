@@ -1,0 +1,3 @@
+$("#txtOrderCustomerID").click(function () {
+
+})
