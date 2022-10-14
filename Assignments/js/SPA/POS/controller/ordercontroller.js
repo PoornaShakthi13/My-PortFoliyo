@@ -33,3 +33,24 @@ function loadAllItemId() {
     }
 
 }
+
+        let customerId;
+
+$("#txtOrderCustomerID").on('change',function () {
+
+    customerId=$(this).val();
+
+    fillCustomerDetail(customerId);
+
+})
+
+function fillCustomerDetail(cid) {
+    let custo= searchCustomer(cid);
+
+    $("#txtOrderCustomerName").val(custo.name);
+    $("#txtOrderCustomerAddress").val(custo.address);
+    $("#txtOrderCustomerContact").val(custo.contact);
+}
+
+
+
