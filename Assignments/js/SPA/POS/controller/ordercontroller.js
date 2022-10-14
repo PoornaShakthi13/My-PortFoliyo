@@ -118,3 +118,35 @@ function generateSubTotal() {
     $("#txtOrderTotal").text(amount);
 
 }
+
+function getDiscount() {
+    var tot=$("#txtOrderTotal").text();
+    var dis=$("#txtOrderDiscount").val();
+
+    var discount=tot*dis/100;
+
+    var newTotsa=tot-discount;
+    $("#txtOrderSub").val(newTotsa);
+}
+
+$("#txtOrderDiscount").on("keydown",function (event) {
+        if(event.key=='Enter'){
+            getDiscount()
+        }
+
+})
+
+function getBalance() {
+    var cash=$("#txtOrderCash").val();
+    var subtotal=$("#txtOrderSub").val();
+
+    var balance=cash-subtotal;
+    $("#txtOrderbalance").val(balance);
+}
+
+$("#txtOrderCash").on("keydown",function (event) {
+    if(event.key=="Enter"){
+        getBalance();
+    }
+
+})
