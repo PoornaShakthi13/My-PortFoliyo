@@ -150,3 +150,16 @@ $("#txtOrderCash").on("keydown",function (event) {
     }
 
 })
+
+    var orderDetails=[];
+
+$("#btnPlaceorder").click(function () {
+        var orderDetail= {
+            orderId:oid,
+            customerName:$("#txtOrderCustomerName").val(),
+            discount:$("#txtOrderDiscount").val(),
+            total:$("#txtOrderTotal").text(),
+            date:date
+
+        }
+})
