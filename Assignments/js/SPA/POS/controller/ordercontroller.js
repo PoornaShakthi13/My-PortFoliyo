@@ -52,5 +52,22 @@ function fillCustomerDetail(cid) {
     $("#txtOrderCustomerContact").val(custo.contact);
 }
 
+        let itemId;
+
+$("#txtOrderItemId").on('change',function () {
+
+    itemId=$(this).val();
+
+    fillItemDetail(itemId);
+
+})
+
+function fillItemDetail(id) {
+    let it = searchItem(id);
+
+    $("#txtOrderItemName").val(it.name);
+    $("#txtOrderItemPrice").val(it.price);
+    $("#txtOrderQtyOnHand").val(it.qty);
+}
 
 
