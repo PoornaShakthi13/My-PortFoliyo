@@ -43,11 +43,10 @@ function fillItemDetailFromTable() {
 }
 
 $("#btnUpdateItem").click(function () {
-    alert("dsvfdvfv")
+
     let itemID = $("#txtUpdateItemId").val();
     updateItem(itemID);
     $("#txtUpdateItemId,#txtUpdateItemName,#txtUpdateItemQty,#txtUpdateItemPrice").val("");
-
 
 })
 
@@ -82,7 +81,6 @@ $("#btnDeleteItem").click(function () {
     let itemId = $("#txtUpdateItemId").val();
     deleteItem(itemId);
     $("#txtUpdateItemId,#txtUpdateItemName,#txtUpdateItemQty,#txtUpdateItemPrice").val("");
-
 
 
 })

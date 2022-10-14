@@ -123,6 +123,13 @@ $("#btnDeleteCustomer").click(function () {
     deleteCustomer(customerID);
     $("#saveCustomerId,#saveCustomerName,#saveCustomerAddress,#saveCustomerContact").val("");
 
+    Swal.fire({
+        icon: 'error',
+        title: 'Deleted',
+        text: 'Something went wrong!',
+        footer: '<a href=""></a>'
+    })
+
 })
 
 function deleteCustomer(cusId) {
