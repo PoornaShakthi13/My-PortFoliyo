@@ -42,3 +42,39 @@ function fillCustomerDetailFromTable() {
 
         });
 }
+
+$("#btnUpdateCustomer").click(function () {
+        alert("dsvfdvfv")
+        let customerID = $("#saveCustomerId").val();
+        updateCustomer(customerID);
+        $("#saveCustomerId,#saveCustomerName,#saveCustomerAddress,#saveCustomerContact").val("");
+
+
+})
+
+function updateCustomer(cid) {
+    let customer = searchCustomer(cid);
+
+    if (customer != null) {
+        customer.id = $("#saveCustomerId").val();
+        customer.name = $("#saveCustomerName").val();
+        customer.address = $("#saveCustomerAddress").val();
+        customer.contact = $("#saveCustomerContact").val();
+
+        loadAllCustomer();
+
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function searchCustomer(cid) {
+        for (let customer of customerArr) {
+            if (customer.cid === cid) {
+                return customer
+            }
+        }
+        return null;
+
+}
