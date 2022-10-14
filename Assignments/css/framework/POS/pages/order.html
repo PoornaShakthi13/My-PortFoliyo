@@ -96,18 +96,19 @@
 <!--------------slider------------->
 
 <main>
-    <div class="d-flex gap-5">
-        <div class="" style="max-height: 350px; width: 450px; padding-bottom: 10px; margin-left: 80px; margin-top: 20px">
+
+    <div class="d-flex gap-2">
+        <div class="" style="max-height: 350px; width:  350px; padding-bottom: 10px; margin-left: -10px; margin-top: 20px">
 
             <div class="card text-bg-secondary shadow-lg" style="padding: 0; margin: 0;">
                 <div class="card-body shadow-none" style="padding: 0; margin: 0;">
-                    <h5 class="card-title fw-bold text-center">Add New Item</h5>
+                    <h5 class="card-title fw-bold text-center">Select Customer</h5>
                     <hr class="table-group-divider bg-black">
                     <div class="row g-2">
 
                         <div class="col-md-5 shadow-none px-3">
-                            <label for="txtItemId" class="form-label">Item ID :</label>
-                            <input id="txtItemId" name="id" class="form-select"></input>
+                            <label for="txtCustomerID" class="form-label">Customer ID :</label>
+                            <select id="txtCustomerID" name="id" class="form-select"></select>
                         </div>
 
                         <div class="col-md-6 shadow-none"  style="padding-right: 0;">
@@ -140,6 +141,96 @@
                 </div>
             </div>
         </div>
+
+        <div class="shadow-none" style="max-height: fit-content; padding: 0; margin: 0; width: 350px;  margin-top: 20px">
+
+            <div class="card text-bg-warning shadow-none" style="padding: 0; margin: 0;">
+                <div class="card-body shadow-none" style="padding: 0; margin: 0;">
+                    <h5 class="card-title fw-bold text-center">Select Item</h5>
+                    <hr class="table-group-divider bg-black">
+                    <div class="row g-2">
+
+                        <div class="col-md-5 shadow-none px-3">
+                            <label for="itemCodeOrder" class="form-label">Item ID :</label>
+                            <select id="itemCodeOrder" class="form-select"></select>
+                        </div>
+
+                        <div class="col-md-6 shadow-none"  style="padding-right: 0;">
+                            <label for="descriptionOrder" class="form-label">Item Name :</label>
+                            <input type="text" class="form-control" id="descriptionOrder" placeholder="----------------">
+                        </div>
+
+                        <div class="col-md-5 px-3">
+                            <label for="unitPrice" class="form-label">Price :</label>
+                            <input type="text" class="form-control" id="unitPrice" placeholder="Rs. 0.00">
+                        </div>
+
+                        <div class="col-md-6"  style="padding-right: 0;">
+                            <label for="qty" class="form-label">Qty  :</label>
+                            <input type="text" class="form-control" id="qty" placeholder="XXX">
+                        </div>
+
+                        <div class="d-flex ms-5 gap-xl-5">
+
+                            <!--                            update button-->
+                            <button class="btn btn-success" data-bs-target="#exampleModal" id="btnUpdateItem" data-bs-toggle="modal" type="button" style="margin-bottom: 38px;margin-top: 40px;margin-left: 35px">
+                                Update Item
+                            </button>
+
+                            <button class="btn btn-danger ms-3" data-bs-target="#" id="btnDeleteItem" data-bs-toggle="modal" type="button" style="margin-bottom: 38px;margin-top: 40px;margin-left: 35px">
+                                <i class="bi bi-cart-plus-fill"></i> Delete Item
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shadow-none" style="max-height: fit-content; padding: 0; margin: 0; width: 350px;  margin-top: 20px">
+
+            <div class="card text-bg-warning shadow-none" style="padding: 0; margin: 0;">
+                <div class="card-body shadow-none" style="padding: 0; margin: 0;">
+                    <h5 class="card-title fw-bold text-center">Select Item</h5>
+                    <hr class="table-group-divider bg-black">
+                    <div class="row g-2">
+
+                        <div class="col-md-5 shadow-none px-3">
+                            <label for="itemCodeOrder" class="form-label">Item ID :</label>
+                            <select id="itemCodeOrder" class="form-select"></select>
+                        </div>
+
+                        <div class="col-md-6 shadow-none"  style="padding-right: 0;">
+                            <label for="descriptionOrder" class="form-label">Item Name :</label>
+                            <input type="text" class="form-control" id="descriptionOrder" placeholder="----------------">
+                        </div>
+
+                        <div class="col-md-5 px-3">
+                            <label for="unitPrice" class="form-label">Price :</label>
+                            <input type="text" class="form-control" id="unitPrice" placeholder="Rs. 0.00">
+                        </div>
+
+                        <div class="col-md-6"  style="padding-right: 0;">
+                            <label for="qty" class="form-label">Qty  :</label>
+                            <input type="text" class="form-control" id="qty" placeholder="XXX">
+                        </div>
+
+                        <div class="d-flex ms-5 gap-xl-5">
+
+                            <!--                            update button-->
+                            <button class="btn btn-success" data-bs-target="#exampleModal" id="btnUpdateItem" data-bs-toggle="modal" type="button" style="margin-bottom: 38px;margin-top: 40px;margin-left: 35px">
+                                Update Item
+                            </button>
+
+                            <button class="btn btn-danger ms-3" data-bs-target="#" id="btnDeleteItem" data-bs-toggle="modal" type="button" style="margin-bottom: 38px;margin-top: 40px;margin-left: 35px">
+                                <i class="bi bi-cart-plus-fill"></i> Delete Item
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </main>
 <script src="../assest/js/bootstrap.min.js"></script>
