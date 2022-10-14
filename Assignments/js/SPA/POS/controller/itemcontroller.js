@@ -78,3 +78,22 @@ function searchItem(iid) {
 
 }
 
+$("#btnDeleteItem").click(function () {
+    let itemId = $("#txtUpdateItemId").val();
+    deleteItem(itemId);
+    $("#txtUpdateItemId,#txtUpdateItemName,#txtUpdateItemQty,#txtUpdateItemPrice").val("");
+})
+
+function deleteItem(itemId) {
+    let item = searchItem(itemId);
+    if (item != null) {
+        let indexNumber = itemArr.indexOf(item);
+        itemArr.splice(indexNumber, 1);
+        loadAllItem();
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
