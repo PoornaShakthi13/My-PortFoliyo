@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>about</title>
+    <title>place order</title>
     <link rel="stylesheet" href="../assest/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assest/normalize.css">
     <link rel="stylesheet" href="../assest/css/mainStyle.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doppio+One&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="../assest/normalize.css">
 </head>
-<body style="background-color: #0f5132">
-<nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top" style="box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.76);">
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.76); background-color:powderblue">
     <div class="container-fluid">
         <img src="assets/img/my-logo.png" style="width: 150px; height: 50px">
-        <a class="navbar-brand" href="#" style="margin-top: 5px; margin-left: 25rem; color: red; font-size: 2rem;font-family: 'Doppio One', sans-serif;">SHAKTHI HARDWARE</a>
+        <a class="navbar-brand" href="#" style="margin-top: 5px; margin-left: 25rem; color: #ff1f2e; font-size: 2rem; font-family: 'Doppio One', sans-serif; ">SHAKTHI HARDWARE</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,7 +23,7 @@
 </nav>
 
 <!--<slider-->
-<div class="offcanvas offcanvas-start text-white position-fixed" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel" style="transform: none; width: 200px; top: 80px; visibility: visible !important; font-family: 'Michroma', sans-serif;background-color: #0377bd;">
+<div class="offcanvas offcanvas-start  text-white position-fixed" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel" style="transform: none; width: 200px; top: 80px; background-color: #0377bd; visibility: visible !important; font-family: 'Michroma', sans-serif;">
     <div class="offcanvas-body p-0">
         <nav class="navbar-dark">
             <ul class="navbar-nav">
@@ -37,7 +34,7 @@
                     <hr class="table-group-divider text-dark">
                 </li>
                 <li>
-                    <a href="../index.html" class="nav-link px-2">
+                    <a href="#" class="nav-link px-2">
                         <span class="me-3" style="font-size: 1.5rem;"><i class="bi bi-speedometer2"></i></span>
                         <span class="text-dark" style="font-size: 1.5rem;">Dash Board</span>
                     </a>
@@ -47,7 +44,7 @@
                 </li>
 
                 <li>
-                    <a href="../pages/costomer.html" class="nav-link px-2">
+                    <a href="pages/costomer.html" class="nav-link px-2">
                         <span class="me-3" style="font-size: 1.5rem;"><i class="bi bi-people-fill"></i></span>
                         <span class="text-dark" style="font-size: 1.5rem;">Customers</span>
                     </a>
@@ -57,7 +54,7 @@
                 </li>
 
                 <li>
-                    <a href="#" class="nav-link px-2">
+                    <a href="pages/item.html" class="nav-link px-2">
                         <span class="me-3" style="font-size: 1.5rem;"><i class="bi bi-stack"></i></span>
                         <span class="text-dark" style="font-size: 1.5rem;">Items</span>
                     </a>
@@ -67,7 +64,7 @@
                 </li>
 
                 <li>
-                    <a href="../pages/order.html" class="nav-link px-2">
+                    <a href="pages/order.html" class="nav-link px-2">
                         <span class="me-3" style="font-size: 1.5rem;"><i class="bi bi-cart4"></i></span>
                         <span class="text-dark" style="font-size: 1.5rem;">Orders</span>
                     </a>
@@ -76,10 +73,8 @@
                     <hr class="table-group-divider text-dark">
                 </li>
 
-
-
                 <li>
-                    <a href="../pages/about.html" class="nav-link px-2">
+                    <a href="pages/about.html" class="nav-link px-2">
                         <span class="me-3" style="font-size: 1.5rem;"><i class="bi bi-cart4"></i></span>
                         <span class="text-dark" style="font-size: 1.5rem;">About</span>
                     </a>
@@ -88,47 +83,11 @@
                     <hr class="table-group-divider text-dark">
                 </li>
 
-
             </ul>
         </nav>
     </div>
 </div>
 <!--------------slider------------->
-<main>
-    <div class="col-12 ms-0 shadow-none" style="margin-right: 20px; margin-top: 20px;">
-    <div style="height:180px; overflow-y: scroll">
-        <table class="table table-bordered bg-dark table-responsive">
-            <thead class="bg-dark text-white text-center">
-            <tr>
-                <th>Order ID</th>
-                <th>Customer Name</th>
-                <th>Discount</th>
-                <th>Total</th>
-                <th>Date</th>
-            </tr>
-            </thead>
-            <tbody class="bg-primary" id="tblOrder">
-            <tr class="bg-primary text-dark">
-                <td>O001</td>
-                <td>Nimal</td>
-                <td>10%</td>
-                <td>1000.00</td>
-                <td>2022/10/14</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    </div>
-    </div>
-
-
-    <button class="btn btn-danger col-md-11" data-bs-target="#" id="btnClearAll" data-bs-toggle="modal" type="button" style="margin-bottom: 10px;margin-top: -24px; margin-left: 40px">
-        <i class="bi bi-cart-plus-fill"></i> Clear All
-    </button>
-
-
-
-</main>
 <script src="../assest/js/bootstrap.min.js"></script>
 </body>
 </html>
