@@ -7,13 +7,38 @@ $("#btnSaveItem").click(function () {
     var iQty=$("#txtItemQty").val();
     var iPrice=$("#txtItemPrice").val();
 
-    let customer={
+    let item={
         id:iid,
         name:iName,
         qty:iQty,
         price:iPrice
     }
-    itemArr.push(customer);
+    itemArr.push(item);
     loadAllItem();
 })
+
+function loadAllItem() {
+    $("#tblItem").empty();
+    for (let item of itemArr){
+        var row = `<tr class='bg-dark text-light'><td>${item.id}</td><td>${item.name}</td><td>${item.qty}</td><td>${item.price}</td></tr>`;
+        $("#tblItem").append(row);
+    }
+
+    fillItemDetailFromTable()
+
+}
+function fillItemDetailFromTable() {
+    $("#tblItem>tr").click(function () {
+        let id = $(this).children(":eq(0)").text();
+        let name = $(this).children(":eq(1)").text();
+        let qty = $(this).children(":eq(2)").text();
+        let price = $(this).children(":eq(3)").text();
+
+        $("#txtItemId").val(id);
+        $("#txtItemName").val(name);
+        $("#txtItemQty").val(qty);
+        $("#txtItemPrice").val(price);
+
+    });
+}
 
