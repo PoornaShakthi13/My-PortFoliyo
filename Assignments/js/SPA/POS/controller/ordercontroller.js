@@ -84,14 +84,20 @@ $("#btnAddtoCart").click(function () {
    }
    cartArr.push(cart);
    loadCartDetails();
+    generateSubTotal();
 })
+
+    let subTotal=[];
 
 function generateTotal() {
     var qty= $("#txtOrderQty").val();
     var uprice= $("#txtOrderItemPrice").val();
     var tot=qty*uprice;
 
+    subTotal.push(tot);
+
     return tot;
+
 }
 
 function loadCartDetails() {
@@ -101,4 +107,14 @@ function loadCartDetails() {
         $("#tblOrder").append(row);
 
     }
+}
+
+
+function generateSubTotal() {
+    let amount=0;
+    for (var i = 0;i<subTotal.length;i++){
+            amount+=subTotal[i];
+    }
+    $("#txtOrderTotal").text(amount);
+
 }
