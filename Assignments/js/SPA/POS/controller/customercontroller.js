@@ -78,3 +78,21 @@ function searchCustomer(cid) {
         return null;
 
 }
+
+$("#btnDeleteCustomer").click(function () {
+    let customerID = $("#saveCustomerId").val();
+    deleteCustomer(customerID);
+    $("#saveCustomerId,#saveCustomerName,#saveCustomerAddress,#saveCustomerContact").val("");
+})
+
+function deleteCustomer(cusId) {
+    let customer = searchCustomer(cusId);
+    if (customer != null) {
+        let indexNumber = customerArr.indexOf(customer);
+        customerArr.splice(indexNumber, 1);
+        loadAllCustomer();
+        return true;
+    } else {
+        return false;
+    }
+}
