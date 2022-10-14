@@ -98,7 +98,7 @@
 <main>
 
     <div class="d-flex gap-5">
-        <div class="" style="max-height: 350px; width:  350px; padding-bottom: 10px; margin-left: -10px; margin-top: 20px">
+        <div class="" style="max-height: 350px; width:  350px; padding-bottom: 10px; margin-left: -5px; margin-top: 20px">
 
             <div class="card text-bg-secondary shadow-lg" style="padding: 0; margin: 0;">
                 <div class="card-body shadow-none" style="padding: 0; margin: 0;">
@@ -175,7 +175,7 @@
                         <div class="d-flex ms-5 gap-xl-5">
 
 
-                            <button class="btn btn-success col-md-9" data-bs-target="#" id="btnAddtoCart" data-bs-toggle="modal" type="button" style="margin-bottom: 30px;margin-top: 5px; margin-left: -5px">
+                            <button class="btn btn-success col-md-9" data-bs-target="#" id="btnAddtoCart" data-bs-toggle="modal" type="button" style="margin-bottom: 10px;margin-top: 5px; margin-left: -5px">
                                 <i class="bi bi-cart-plus-fill"></i> Add To Cart
                             </button>
                         </div>
@@ -186,7 +186,7 @@
 
         <div class="shadow-none" style="max-height: fit-content; padding: 0; margin: 0; width: 350px;  margin-top: 20px">
 
-            <div class="card text-bg-warning shadow-none" style="padding: 0; margin: 0;">
+            <div class="card text- shadow-none" style="padding: 0; margin: 0; background-color: darkseagreen">
                 <div class="card-body shadow-none" style="padding: 0; margin: 0;">
                     <h5 class="card-title fw-bold text-center">Bill</h5>
                     <hr class="table-group-divider bg-black">
@@ -212,21 +212,41 @@
                             <input type="text" class="form-control" id="subTotal" placeholder="Rs 0.00">
                         </div>
 
-                        <div class="d-flex ms-5 gap-xl-5">
-
-                            <!--                            update button-->
-                            <button class="btn btn-success" data-bs-target="#exampleModal" id="btnUpdateItem" data-bs-toggle="modal" type="button" style="margin-bottom: 38px;margin-top: 40px;margin-left: 35px">
-                                Update Item
-                            </button>
-
-                            <button class="btn btn-danger ms-3" data-bs-target="#" id="btnDeleteItem" data-bs-toggle="modal" type="button" style="margin-bottom: 38px;margin-top: 40px;margin-left: 35px">
-                                <i class="bi bi-cart-plus-fill"></i> Delete Item
-                            </button>
+                        <div class="col-md-9"  style="padding-right: 0; margin-left: 10px; margin-bottom: 38px ">
+                            <label for="balance" class="form-label">Balance  :</label>
+                            <input type="text" class="form-control" id="balance" placeholder="Rs 0.00">
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+    <div class="col-12 ms-0 shadow-none" style="margin-right: 20px; margin-top: 10px;">
+        <div style="height:180px; overflow-y: scroll">
+            <table class="table table-bordered bg-dark table-responsive">
+                <thead class="bg-dark text-white text-center">
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Unit Price(Rs)</th>
+                    <th>QTY</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody class="bg-primary" id="tblOrder">
+                <tr class="bg-primary text-dark">
+                    <td>I001</td>
+                    <td>Cement</td>
+                    <td>3200.00</td>
+                    <td>10</td>
+                    <td>32000.00</td>
+                </tr>
+                </tbody
+            </table>
+        </div>
+    </div>
 
     </div>
 
