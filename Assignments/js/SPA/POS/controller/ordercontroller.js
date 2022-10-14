@@ -70,4 +70,35 @@ function fillItemDetail(id) {
     $("#txtOrderQtyOnHand").val(it.qty);
 }
 
+     let cartArr=[];
 
+$("#btnAddtoCart").click(function () {
+    let total=generateTotal();
+   let cart = {
+       itemCode:itemId,
+       itemName:$("#txtOrderItemName").val(),
+       unitPrice:$("#txtOrderItemPrice").val(),
+       qty:$("#txtOrderQty").val(),
+       total:total
+
+   }
+   cartArr.push(cart);
+   loadCartDetails();
+})
+
+function generateTotal() {
+    var qty= $("#txtOrderQty").val();
+    var uprice= $("#txtOrderItemPrice").val();
+    var tot=qty*uprice;
+
+    return tot;
+}
+
+function loadCartDetails() {
+    $("#tblOrder").empty();
+    for(let cart of cartArr){
+        var row = `<tr class='bg-dark text-light'><td>${cart.itemCode}</td><td>${cart.itemName}</td><td>${cart.unitPrice}</td><td>${cart.qty}</td><td>${cart.total}</td></tr>`;
+        $("#tblOrder").append(row);
+
+    }
+}
