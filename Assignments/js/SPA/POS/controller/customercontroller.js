@@ -13,8 +13,28 @@ $("#btnSaveCustomer").click(function () {
             address:cAddress,
             contact:cContact
         }
-        customerArr.push(customer);
-        loadAllCustomer();
+
+
+    Swal.fire({
+        title: ' Do You Want to Save this customer?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Save',
+        denyButtonText: `Don't save`,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            customerArr.push(customer);
+            loadAllCustomer();
+            Swal.fire('Saved!', '', 'success')
+        } else if (result.isDenied) {
+            Swal.fire('Changes are not saved', '', 'info')
+        }
+    })
+
+
+
+
 })
 
 function loadAllCustomer() {
@@ -44,10 +64,28 @@ function fillCustomerDetailFromTable() {
 }
 
 $("#btnUpdateCustomer").click(function () {
-        alert("dsvfdvfv")
         let customerID = $("#saveCustomerId").val();
         updateCustomer(customerID);
         $("#saveCustomerId,#saveCustomerName,#saveCustomerAddress,#saveCustomerContact").val("");
+
+
+    Swal.fire({
+        title: ' Do You Want to Update this customer?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'update',
+        denyButtonText: `Don't update`,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            customerArr.push(customer);
+            loadAllCustomer();
+            Swal.fire('Saved!', '', 'success')
+        } else if (result.isDenied) {
+            Swal.fire('Changes are not saved', '', 'info')
+        }
+    })
+
 
 
 })
@@ -80,9 +118,11 @@ function searchCustomer(cid) {
 }
 
 $("#btnDeleteCustomer").click(function () {
+
     let customerID = $("#saveCustomerId").val();
     deleteCustomer(customerID);
     $("#saveCustomerId,#saveCustomerName,#saveCustomerAddress,#saveCustomerContact").val("");
+
 })
 
 function deleteCustomer(cusId) {

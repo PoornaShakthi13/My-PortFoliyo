@@ -82,6 +82,9 @@ $("#btnDeleteItem").click(function () {
     let itemId = $("#txtUpdateItemId").val();
     deleteItem(itemId);
     $("#txtUpdateItemId,#txtUpdateItemName,#txtUpdateItemQty,#txtUpdateItemPrice").val("");
+
+
+
 })
 
 function deleteItem(itemId) {

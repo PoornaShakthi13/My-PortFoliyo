@@ -190,3 +190,5 @@ $("#btnorderdetail").click(function () {
             var row = `<tr class='bg-dark text-light'><td>${oDetail.orderId}</td><td>${oDetail.customerName}</td><td>${oDetail.discount}</td><td>${oDetail.total}</td><td>${oDetail.date}</td></tr>`;
             $("#tblOrderDetails").append(row);        }
 })
+
+
