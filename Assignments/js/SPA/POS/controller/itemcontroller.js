@@ -34,11 +34,47 @@ function fillItemDetailFromTable() {
         let qty = $(this).children(":eq(2)").text();
         let price = $(this).children(":eq(3)").text();
 
-        $("#txtItemId").val(id);
-        $("#txtItemName").val(name);
-        $("#txtItemQty").val(qty);
-        $("#txtItemPrice").val(price);
+        $("#txtUpdateItemId").val(id);
+        $("#txtUpdateItemName").val(name);
+        $("#txtUpdateItemQty").val(qty);
+        $("#txtUpdateItemPrice").val(price);
 
     });
+}
+
+$("#btnUpdateItem").click(function () {
+    alert("dsvfdvfv")
+    let itemID = $("#txtUpdateItemId").val();
+    updateItem(itemID);
+    $("#txtUpdateItemId,#txtUpdateItemName,#txtUpdateItemQty,#txtUpdateItemPrice").val("");
+
+
+})
+
+function updateItem(iid) {
+    let item = searchItem(iid);
+
+    if (item != null) {
+        item.id = $("#txtUpdateItemId").val();
+        item.name = $("#txtUpdateItemName").val();
+        item.qty = $("#txtUpdateItemQty").val();
+        item.price = $("#txtUpdateItemPrice").val();
+
+        loadAllItem();
+
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function searchItem(iid) {
+    for (let item of itemArr) {
+        if (item.id === iid) {
+            return item
+        }
+    }
+    return null;
+
 }
 
