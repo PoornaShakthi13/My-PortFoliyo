@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="icon" href="event/images/cal.png">
+    <meta name="keywords" content="calculator">
+    <meta name="description" content="online calculator Web Application">
+    <meta name="author" content="Ashan Manuka Jayarathne">
+    <meta name="owner" content="Ashan Manuka">
+    <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
+    <link rel="stylesheet" href="event/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>Calculator Web Application</h1>
+    </div>
+</header>
+
+<section id="free-sec"></section>
+
+<main class="container">
+    <section class="container" id="main-frame">
+       <section class="row">
+           <div class="col-2" id="clear-btn">
+               <button class="bButton" id="cls-btn"><b>clear</b></button>
+           </div>
+           <div class="col-10" id="display-area">
+               <input class="form-control" id="display-one" type="text">
+               <input class="form-control" id="display-two" type="text">
+           </div>
+           <div class="col-12" id="free-area"></div>
+          <!--button area-->
+           <div class="col-12" id="r-one">
+               <div class="row">
+                   <div class="col-3">
+                       <button class="Button" id="bt7"><b>7</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="bt8"><b>8</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="bt9"><b>9</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="btPlus"><b>+</b></button>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12" id="r-two">
+               <div class="row">
+                   <div class="col-3">
+                       <button class="Button" id="bt4"><b>4</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="bt5"><b>5</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="bt6"><b>6</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="btMinus"><b>-</b></button>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12" id="r-three">
+               <div class="row">
+                   <div class="col-3">
+                       <button class="Button" id="bt1"><b>1</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="bt2"><b>2</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="bt3"><b>3</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="btDevide"><b>/</b></button>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12" id="r-four">
+               <div class="row">
+                   <div class="col-3">
+                       <button class="Button" id="bt0"><b>0</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="btDot"><b>.</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="btEqual"><b>=</b></button>
+                   </div>
+                   <div class="col-3">
+                       <button class="Button" id="btMult"><b>*</b></button>
+                   </div>
+               </div>
+           </div>
+       </section>
+    </section>
+</main>
+
+
+
+
+<!--links script files-->
+<script src="event/js/bootstrap.min.js"></script>
+<script src="event/jQuery/jquery-3.6.1.min.js"></script>
+<!--Logics-->
+<script>
+    //Assign Numbers to textfield
+    $("#bt0").click(function () {
+      bigNumber("0");
+    });
+
+    $("#bt1").click(function () {
+        bigNumber("1");
+    });
+
+    $("#bt2").click(function () {
+        bigNumber("2");
+    });
+
+    $("#bt3").click(function () {
+        bigNumber("3");
+    });
+
+    $("#bt4").click(function () {
+        bigNumber("4");
+    });
+
+    $("#bt5").click(function () {
+        bigNumber("5");
+    });
+
+    $("#bt6").click(function () {
+        bigNumber("6");
+    });
+
+    $("#bt7").click(function () {
+        bigNumber("7");
+    });
+
+    $("#bt8").click(function () {
+        bigNumber("8");
+    });
+
+    $("#bt9").click(function () {
+        bigNumber("9");
+    });
+
+    $("#btDevide").click(function () {
+        bigNumber("/");
+    });
+
+    $("#btMult").click(function () {
+        bigNumber("*");
+    });
+
+    $("#btMinus").click(function () {
+        bigNumber("-");
+    });
+
+    $("#btPlus").click(function () {
+        bigNumber("+");
+    });
+
+    $("#btDot").click(function () {
+        bigNumber(".");
+    });
+
+    $("#btEqual").click(function () {
+        bigNumber("=");
+    });
+
+
+
+    var largeNumber = "0";
+    var cNum = 0;
+
+
+    function bigNumber(num){
+        var sel = num;
+        if (sel==="+" || sel==="-" || sel ==="*" || sel ==="/"){
+            console.log("selected non integer");
+            var icon = sel;
+            $("#display-two").val(sel);
+            console.log("sent "+largeNumber);
+            calculation(largeNumber);
+            largeNumber = "0";
+        }else if (sel === "="){
+            lastCal(largeNumber);
+            largeNumber = "0";
+        }else{
+            largeNumber = largeNumber+""+num;
+            dNum = parseInt(largeNumber);
+            $("#display-one").val(dNum);
+
+            console.log(largeNumber);
+        }
+    }
+
+    function calculation(dig){
+        cNum = parseInt(dig);
+        console.log("after converting : "+cNum);
+    }
+
+    function lastCal(nLast){
+      var cNumTwo = parseInt(nLast);
+      var operator = $("#display-two").val();
+
+      if(operator === "+"){
+          cNum = cNum + cNumTwo;
+          $("#display-one").val("   "+cNum);
+      }
+
+        if(operator === "-"){
+            cNum = cNum - cNumTwo;
+            $("#display-one").val("   "+cNum);
+        }
+
+        if(operator === "*"){
+            cNum = cNum * cNumTwo;
+            $("#display-one").val("   "+cNum);
+        }
+
+        if(operator === "/"){
+            cNum = cNum / cNumTwo;
+            $("#display-one").val("   "+cNum);
+        }
+
+    }
+
+
+
+</script>
+</body>
+</html>
