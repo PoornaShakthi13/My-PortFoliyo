@@ -1,3 +1,4 @@
+
 $("#txtOrderCustomerID").click(function () {
         // alert("xsadcds");
        loadAllCustomerID();
@@ -6,7 +7,6 @@ $("#txtOrderCustomerID").click(function () {
 function loadAllCustomerID() {
     // $("#txtOrderCustomerID").click(function () {
         $("#txtOrderCustomerID").empty();
-        $("#txtOrderCustomerID").append(`<option></option>`);
         for (let cus of customerArr){
             $("#txtOrderCustomerID").append(`<option>${cus.cid}</option>`);
         }
@@ -27,7 +27,6 @@ $("#txtOrderItemId").click(function () {
 
 function loadAllItemId() {
     $("#txtOrderItemId ").empty();
-    $("#txtOrderItemId").append(`<option></option>`);
     for (let item of itemArr){
         $("#txtOrderItemId").append(`<option>${item.id}</option>`);
     }
@@ -155,14 +154,14 @@ $("#txtOrderCash").on("keydown",function (event) {
 
 $("#btnPlaceorder").click(function () {
         var oid=generateOrderId();
-        var date=getCurrentDate();
+        // var date=getCurrentDate();
 
         var orderDetail= {
             orderId:oid,
             customerName:$("#txtOrderCustomerName").val(),
             discount:$("#txtOrderDiscount").val(),
             total:$("#txtOrderTotal").text(),
-            date:date
+            // date:date
 
         }
         orderDetails.push(orderDetail);
@@ -181,13 +180,15 @@ function generateOrderId() {
            orderNewID=orderId+newId;
 
            return orderNewID;
+
         }
 }
 
 $("#btnorderdetail").click(function () {
         $("#tblOrderDetails").empty();
         for (let oDetail of orderDetails){
-            var row = `<tr class='bg-dark text-light'><td>${oDetail.orderId}</td><td>${oDetail.customerName}</td><td>${oDetail.discount}</td><td>${oDetail.total}</td><td>${oDetail.date}</td></tr>`;
+            console.log(oDetail);
+            var row = `<tr class='bg-dark text-light'><td>${oDetail.orderId}</td><td>${oDetail.customerName}</td><td>${oDetail.discount}</td><td>${oDetail.total}</td></tr>`;
             $("#tblOrderDetails").append(row);        }
 })
 
