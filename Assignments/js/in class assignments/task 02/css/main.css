@@ -18,6 +18,34 @@
     color: white;
     margin-left: 90px;
     margin-top: 50px;
-    
 
+
+}
+
+#sec1>div:nth-child(1)>div:nth-child(1){
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-size: 30px;
+
+}
+
+#sec1>div:nth-child(1)>div:nth-child(2){
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+#enterName{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    margin-left: 35%;
+    cursor: pointer;
+}
+
+#sec1>div:nth-child(2){
+    width: 600px;
+    height: 150px;
+    display: flex;
+    gap: 25px;
+    margin-left: 40px;
 }
