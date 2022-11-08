@@ -1,0 +1,23 @@
+#sec1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50vw;
+    height: 90vh;
+    background-color: #0a53be;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.89);
+
+}
+
+#sec1>div:nth-child(1){
+    width: 500px;
+    height: 300px;
+    color: white;
+    margin-left: 90px;
+    margin-top: 50px;
+    
+
+}
