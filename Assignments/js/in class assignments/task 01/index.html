@@ -3,23 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Js Timers</title>
-
-    <style>
-
-        div{
-            width: 300px;
-            height: 300px;
-            border: 1px solid red;
-        }
-        button{
-            margin-top: 10px;
-            padding: 10px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div id="display"></div>
 
+<button id="start">Start</button>
+<button id="end">End</button>
+
+
+<script src="js/jquery-3.6.1.min.js"></script>
+
+
+<script>
+
+    var colors=['red','green','orange','yellow','pink','blue'];
+
+    var count=0;
+    var color=0;
+
+    function  setColors() {
+        $("#display").css('background',colors[count]);
+        color=count;
+        count ++;
+
+        if(count==5){
+            count=0;
+        }
+    }
+
+    $("#start").click(function () {
+        setInterval(setColors,500);
+    })
+
+    $("#end").click(function () {
+        alert(color);
+        $("#display").css("background-color",colors[color]);
+        // setInterval().toFixed();
+    })
+
+
+
+
+
+</script>
 
 
 </body>
