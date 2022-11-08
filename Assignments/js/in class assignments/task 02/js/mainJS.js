@@ -21,9 +21,10 @@ function setDueData() {
 
 setInterval(setDueData,500);
 
-$("#content").click(function () {
+$("#enterName").click(function () {
     var pName=$("txtName").val();
     var pColor=$("#colors").val();
     var person={name:pName, color:pColor};
-    queueDetails.names.unshift(person)
+    queueDetails.names.unshift(person);
 })
+
