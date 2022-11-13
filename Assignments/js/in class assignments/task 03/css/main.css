@@ -1,4 +1,4 @@
-.main{
+main>section{
     width: 1000px;
     height: 150px;
     background-color: rgba(255,255,255,0.10);
@@ -12,7 +12,7 @@
 
 }
 
-#sec01{
+main>section>section{
     border: 2px solid white;
     display: flex;
     position: absolute;
@@ -26,7 +26,7 @@
     height: 100px;
 }
 
-div{
+main>div{
     position: absolute;
     top: 350px;
     bottom: 0px;
@@ -39,8 +39,7 @@ div{
     gap: 30px;
 }
 
-
-#start{
+main>div>button:nth-child(1){
     width: 100%;
     height: 100%;
     background-color: lightseagreen;
@@ -49,12 +48,18 @@ div{
     font-weight: bold;
 }
 
-#end{
+main>div>button:nth-child(2){
     width: 100%;
     height: 100%;
     background-color: red;
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
+
+}
+
+main>section>section>div{
+    width: 100%;
+    height: 100%;
 
 }
