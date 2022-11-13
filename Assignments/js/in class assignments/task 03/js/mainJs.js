@@ -9,6 +9,25 @@ var kingtRider={
             this.tmArray.unshift(lastColor);
     },
 
+    animateRight:function () {
+            var firstColor=this.tmArray.shift();
+            this.tmArray.push(firstColor);
+    },
+
+    animate:function () {
+        this.count++
+        if (this.count<=this.leftArray.length){
+            this.tmArray=this.leftArray
+
+            this.animateLeft();
+        }else {
+            if (this.count>=(this.rightArray.length*2)){
+                this.count=0;
+            }
+            this.tmArray=this.rightArray;
+            this.animateRight();
+        }
+    }
 
 
 }
