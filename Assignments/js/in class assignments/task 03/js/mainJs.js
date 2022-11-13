@@ -28,6 +28,24 @@ var kingtRider={
             this.animateRight();
         }
     }
-
-
 }
+makeDives();
+function makeDives() {
+        $("#sec01").empty();
+
+    for (let i = 0; i <(kingtRider.tmArray.length)/2 ; i++) {
+        $("#sec01").append(`<div style="background-color: ${kingtRider.tmArray[i]}"></div>`)
+    }
+    kingtRider.animate();
+}
+
+        var id=setInterval(makeDives,90);
+
+$("#start").click(function () {
+        clearInterval(id);
+        id=setInterval(makeDives,90);
+})
+
+$("#end").click(function () {
+        clearInterval(id);
+})
