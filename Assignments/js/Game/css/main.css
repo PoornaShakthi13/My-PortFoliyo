@@ -1,5 +1,5 @@
 .body{
-    margin: 0px ;
+    margin: 0 ;
 }
 
 .backgroud{
@@ -14,6 +14,15 @@
     position: absolute;
     height: 170px;
     margin-top: 470px;
+
+}
+
+#lion{
+
+    position: absolute;
+    height: 170px;
+    margin-top: 470px;
+    margin-left: 700px;
 
 }
 
