@@ -18,19 +18,60 @@ function idleStartAnimation() {
 }
 
 
-// function runAnimation() {
-//     runImageNumber = runImageNumber + 1;
-//
-//     if (runImageNumber === 9) {
-//         runImageNumber = 1;
-//     }
-//
-//     girl.src = "assets/Run (" + runImageNumber + ").png";
-//
-// }
-//
-// function runAnimationStart() {
-//     runAnimationNumber = setInterval(runAnimation, 100);
-//     clearInterval(idleAnimationNumber);
-//
-// }
+function runAnimation() {
+    runImageNumber = runImageNumber + 1;
+
+    if (runImageNumber === 9) {
+        runImageNumber = 1;
+    }
+
+    boy.src = "assets/Run" + (runImageNumber)+ ".png";
+
+}
+
+function runAnimationStart() {
+    runAnimationNumber = setInterval(runAnimation, 100);
+    clearInterval(idleAnimationNumber);
+
+}
+
+function keyCheck(event) {
+    var keyCode = event.which;
+
+    if (keyCode === 13) {
+        if (runAnimationNumber === 0) {
+            runAnimationStart();
+        }
+
+        /*move background*/
+        if (moveBackgroundAnimationID === 0) {
+            moveBackgroundAnimationID = setInterval(moveBackground, 100);
+        }
+
+        /*move gif*/
+        if (boxAnimationID === 0) {
+            boxAnimationID = setInterval(boxAnimation, 100);
+        }
+    }
+
+}
+
+if (keyCode === 32) {
+    if (jumpAnimationNumber === 0) {
+        jumpAnimationStart();
+    }
+
+    /*move background*/
+    if (moveBackgroundAnimationID === 0) {
+        moveBackgroundAnimationID = setInterval(moveBackground, 100);
+    }
+
+    /*move gif*/
+    if (boxAnimationID === 0) {
+        boxAnimationID = setInterval(boxAnimation, 100);
+    }
+}
+}
+
+
+
