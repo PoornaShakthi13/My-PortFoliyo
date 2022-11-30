@@ -13,7 +13,7 @@ function idelAnimation() {
     if (IdeleImage === 11) {
         IdeleImage = 1;
     }
-    boy.src = "assest/idle (" + IdeleImage + ").png";
+    // boy.src = "assest/Idle (" + IdeleImage + ").png";
 }
 
 function ideleAnimationStart() {

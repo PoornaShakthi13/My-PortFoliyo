@@ -1,14 +1,14 @@
 .body{
     margin: 0 ;
+    overflow-y: hidden;
 }
 
 .backgroud{
-    width: 100%;
+    width: 300vw;
     height: 100vh;
-    background-image: url("../css/assest/1234.jpg");
-    background-position: center;
-    background-size: cover;
-}
+    background-image: url("../assets/1234.jpg");
+    background-position: left;
+    background-size: contain;}
 
 #boy{
     position: absolute;
@@ -23,6 +23,11 @@
     height: 170px;
     margin-top: 470px;
     margin-left: 700px;
+
+}
+
+main{
+
 
 }
 
